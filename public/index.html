@@ -11,7 +11,7 @@
 
   <script src="js/vendors/traceur-runtime.min.js"></script>
   <script src="js/vendors/typescript.js"></script>
-  <script src="js/vendors/es6-module-loader-dev.js"></script>
+
   <script src="js/vendors/system.js"></script>
   <script src="js/vendors/angular2.min.js"></script>
   <script>
@@ -19,7 +19,11 @@
       transpiler: 'typescript'
     });
     //System.import('js/hello.js').catch(console.log.bind(console));
-    System.import('js/hello.ts').catch(console.log.bind(console));
+    System.import('js/hello.ts').then(function() {
+      console.log("loaded");
+    }).catch(function(error) {
+      console.error(error);
+    });
   </script>
 </body>
 </html>

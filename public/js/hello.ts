@@ -11,7 +11,7 @@ export class Hello {
     name: string = 'World';
     constructor() {
         setTimeout(() => {
-            this.name = 'NEW World'
+            this.name = 'NEW WORLD'
         }, 2000);
     }
 }
