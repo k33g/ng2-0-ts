@@ -9,6 +9,7 @@
 
   <hello>Loading...</hello>
 
+  <!-- libraries -->
   <script src="js/vendors/traceur-runtime.min.js"></script>
   <script src="js/vendors/typescript.js"></script>
 
@@ -18,7 +19,7 @@
     System.config({
       transpiler: 'typescript'
     });
-    //System.import('js/hello.js').catch(console.log.bind(console));
+
     System.import('js/hello.ts').then(function() {
       console.log("loaded");
     }).catch(function(error) {
