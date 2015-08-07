@@ -1,5 +1,8 @@
 #Ng2-0-TS
 
+Ng2-0-TS is a "walking skeleton" project build to discover Angular2.* with TypeScript.
+(Dynamic TypeScript Transpilation)
+
 ##Libraries
 
 - [https://code.angularjs.org/2.0.0-alpha.34/angular2.min.js](https://code.angularjs.org/2.0.0-alpha.34/angular2.min.js)
@@ -18,5 +21,11 @@
 ##Play
 
     http-server public
+    
+##Transpilation
 
+If you want to transpile TypeScript source code before (instead dynamic transpilation):
 
+- type `tsc public/**/*.ts --watch --target ES5 --experimentalDecorators --module AMD`
+- change `System.import('js/hello.ts')` by `System.import('js/hello.js')`
+- you don't need `<script src="js/vendors/typescript.js"></script>` anymore
